@@ -4,14 +4,14 @@
 using namespace std;
 int main() {
 	while (1) {
-		String menu = "1.change resolution mode \n2.change projectmode \n";
+		string menu = "1.change resolution mode \n2.change projectmode \n";
 		cout<<menu<<endl;
-		inputer = _getch();
-		if(inputer == "1") {
-			String menu1 = "";
+		char inputer = _getch();
+		if(inputer == '1') {
+			string menu1 = "";
 			
-		} else if (inputer == "2") {
-			String menu2= "";
+		} else if (inputer == '2') {
+			string menu2= "";
 		} else {
 			break;
 		}
