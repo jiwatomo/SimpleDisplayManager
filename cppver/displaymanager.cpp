@@ -9,7 +9,7 @@ int changetoOnly1();
 int changetoOnly2();
 int main() {
 	while (1) {
-		string menu = "Simple Display Manager\nPress any to exit\n1.Change resolution mode \n2.Change project mode";
+		string menu = "======================\nSimple Display Manager\nPress any to exit\n1.Change resolution mode \n2.Change project mode";
 		cout<<menu<<endl;
 		char inputer = _getch();
 		if(inputer == '1') {
@@ -32,7 +32,8 @@ int main() {
 				}
 			}
 		} else if (inputer == '2') {
-			string menu2= "1.Extend mode\n2.only 1\n3.only 2";
+			string menu2= "1.Extend mode\n2.only internal\n3.only external";
+			cout<<menu2<<endl;
 			char inputer2 = _getch();
 			if(inputer2 == '1') {
 				int check = changetoExtend();
@@ -44,16 +45,16 @@ int main() {
 			} else if (inputer2 == '2') {
 				int check = changetoOnly1();
 				if (check == 1) {
-					cout<<"success Only 1"<<endl;
+					cout<<"success only internal"<<endl;
 				} else {
-					cout<<"failed Only 1"<<endl;
+					cout<<"failed only internal"<<endl;
 				}
 			} else if (inputer2 == '3') {
 				int check = changetoOnly2();
 				if (check == 1) {
-					cout<<"success Only 2"<<endl;
+					cout<<"success Oonly external"<<endl;
 				} else {
-					cout<<"failed Only 2"<<endl;
+					cout<<"failed only external"<<endl;
 				}
 			}
 		} else {
@@ -73,14 +74,14 @@ int changeto768() {
 	return 1;
 }
 int changetoExtend() {
-	system("echo success");
+	system("DisplaySwitch.exe /extend");
 	return 1;
 }
 int changetoOnly1() {
-	system("echo success");
+	system("DisplaySwitch.exe /internal");
 	return 1;
 }
 int changetoOnly2() {
-	system("echo success");
+	system("DisplaySwitch.exe /external");
 	return 1;
 }
