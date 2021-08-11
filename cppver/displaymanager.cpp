@@ -13,9 +13,9 @@ int main() {
 		} else if (inputer == '2') {
 			string menu2= "";
 		} else {
+			cout<<"Bye"<<endl;
 			break;
 		}
-		cout<<"Bye"<<endl;
 	}
 	return 0;
 }
