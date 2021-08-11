@@ -4,9 +4,12 @@
 using namespace std;
 int changeto1080p();
 int changeto768();
+int changetoExtend();
+int changetoOnly1();
+int changetoOnly2();
 int main() {
 	while (1) {
-		string menu = "Simple Display Manager\nPress any to exit\n1.Change resolution mode \n2.Change projectmode";
+		string menu = "Simple Display Manager\nPress any to exit\n1.Change resolution mode \n2.Change project mode";
 		cout<<menu<<endl;
 		char inputer = _getch();
 		if(inputer == '1') {
@@ -25,11 +28,34 @@ int main() {
 				if (check == 1) {
 					cout<<"1366 mode success"<<endl;
 				} else {
-					cout<<"failde changing to 1366 mode"<<endl;
+					cout<<"failed changing to 1366 mode"<<endl;
 				}
 			}
 		} else if (inputer == '2') {
-			string menu2= "";
+			string menu2= "1.Extend mode\n2.only 1\n3.only 2";
+			char inputer2 = _getch();
+			if(inputer2 == '1') {
+				int check = changetoExtend();
+				if (check == 1) {
+					cout<<"success extend mode"<<endl;
+				} else {
+					cout<<"failed extend mode"<<endl;
+				}
+			} else if (inputer2 == '2') {
+				int check = changetoOnly1();
+				if (check == 1) {
+					cout<<"success Only 1"<<endl;
+				} else {
+					cout<<"failed Only 1"<<endl;
+				}
+			} else if (inputer2 == '3') {
+				int check = changetoOnly2();
+				if (check == 1) {
+					cout<<"success Only 2"<<endl;
+				} else {
+					cout<<"failed Only 2"<<endl;
+				}
+			}
 		} else {
 			cout<<"Bye"<<endl;
 			break;
@@ -47,11 +73,14 @@ int changeto768() {
 	return 1;
 }
 int changetoExtend() {
+	system("echo success");
 	return 1;
 }
 int changetoOnly1() {
+	system("echo success");
 	return 1;
 }
 int changetoOnly2() {
+	system("echo success");
 	return 1;
 }
