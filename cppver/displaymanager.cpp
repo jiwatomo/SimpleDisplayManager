@@ -6,7 +6,7 @@ int changeto1080p();
 int changeto768();
 int main() {
 	while (1) {
-		string menu = "1.Change resolution mode \n2.Change projectmode \n";
+		string menu = "Simple Display Manager\nPress any to exit\n1.Change resolution mode \n2.Change projectmode";
 		cout<<menu<<endl;
 		char inputer = _getch();
 		if(inputer == '1') {
